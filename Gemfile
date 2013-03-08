@@ -5,9 +5,9 @@ gem "rails", "~> 3.0.20"
 gem 'jquery-rails'
 gem "formtastic", '1.2.4'
 gem "will_paginate"
-gem 'pg'
+gem 'sqlite3'
 gem "devise"
-gem 'sunspot_rails', '1.2.1'
+gem 'sunspot_rails', '1.3.0'
 gem 'carmen'
 gem 'ancestry'
 gem 'acts_as_list', '0.1.4'
@@ -22,6 +22,6 @@ gem 'rake', '0.9.2.2'
 gem 'breadcrumbs'
 
 group :development, :test do
-  gem 'silent-postgres'
   gem 'railroady'
 end
+
