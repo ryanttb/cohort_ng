@@ -25,3 +25,6 @@ group :development, :test do
   gem 'railroady'
 end
 
+group :test do
+  gem 'rspec-rails', '2.11.0'
+end

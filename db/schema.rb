@@ -207,7 +207,6 @@ ActiveRecord::Schema.define(:version => 20130306213025) do
   end
 
   add_index "tags", ["ancestry"], :name => "index_tags_on_ancestry"
-  add_index "tags", ["id"], :name => "sqlite_autoindex_tags_1", :unique => true
   add_index "tags", ["name"], :name => "index_tags_on_name"
   add_index "tags", ["position"], :name => "index_tags_on_position"
 
