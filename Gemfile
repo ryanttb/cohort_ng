@@ -5,7 +5,8 @@ gem "rails", "~> 3.0.20"
 gem 'jquery-rails'
 gem "formtastic", '1.2.4'
 gem "will_paginate"
-gem 'sqlite3'
+#gem 'sqlite3'
+gem 'pg'
 gem "devise"
 gem 'sunspot_rails', '1.3.0'
 gem 'carmen'
@@ -23,8 +24,11 @@ gem 'breadcrumbs'
 
 group :development, :test do
   gem 'railroady'
+  gem "ruby-graphviz"
 end
 
 group :test do
   gem 'rspec-rails', '2.11.0'
+  gem 'capybara', '1.1.2'
+  gem 'factory_girl_rails', '4.1.0'
 end
