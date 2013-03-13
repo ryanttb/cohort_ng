@@ -12,21 +12,15 @@ describe( "contacts requests" ) {
       it( ) { should( have_selector( "input#user_password" ) ); }
 
       describe( "post /users/sign_in" ) {
-        #let( :user_attr ) { Factory.attributes_for( :user ) }
+        let( :user_attr ) { FactoryGirl.attributes_for( :user ) }
         
         before( ) {
-          #User.create!( :user_attr );
-          User.create!( {
-            name: "Ryan Westphal",
-            email: "rwestphal@cyber.law.harvard.edu",
-            password: "foobar",
-            password_confirmation: "foobar"
-          });
+          User.create!( user_attr );
 
           User.first().confirm!();
 
-          fill_in( "Email", { with: "rwestphal@cyber.law.harvard.edu" } );
-          fill_in( "Password", { with: "foobar" } );
+          fill_in( "Email", { with: user_attr[:email] } );
+          fill_in( "Password", { with: user_attr[:password] } );
           click_button( "Sign in" );
         }
 
