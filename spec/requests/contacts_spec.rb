@@ -18,7 +18,7 @@ describe( "contacts requests" ) {
       before( ) {
         User.create!( user_attr );
 
-        User.first().confirm!();
+        User.last().confirm!();
 
         fill_in( "Email", { with: user_attr[:email] } );
         fill_in( "Password", { with: user_attr[:password] } );
@@ -31,12 +31,12 @@ describe( "contacts requests" ) {
     }
   }
 
-  describe( "get /contacts" ) {
+  describe( "get /contacts (with one contact)" ) {
     before( ) {
-      visit( contacts_path );
-      User.create!( user_attr );
+      #User.create!( user_attr );
+      #User.last().confirm!();
 
-      User.first().confirm!();
+      visit( contacts_path );
 
       fill_in( "Email", { with: user_attr[:email] } );
       fill_in( "Password", { with: user_attr[:password] } );
