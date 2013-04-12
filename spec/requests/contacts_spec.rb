@@ -2,6 +2,16 @@ require "spec_helper";
 
 describe( "contacts requests" ) {
   let( :user_attr ) { FactoryGirl.attributes_for( :user ) }
+  let( :contact_attr ) { FactoryGirl.attributes_for( :contact ) }
+
+  before( ) {
+    User.create!( user_attr );
+
+    User.last().confirm!();
+
+    Contact.create!( contact_attr );
+  }
+
 
   subject { page };
 
@@ -16,9 +26,9 @@ describe( "contacts requests" ) {
 
     describe( "post /users/sign_in" ) {
       before( ) {
-        User.create!( user_attr );
+        #User.create!( user_attr );
 
-        User.last().confirm!();
+        #User.last().confirm!();
 
         fill_in( "Email", { with: user_attr[:email] } );
         fill_in( "Password", { with: user_attr[:password] } );

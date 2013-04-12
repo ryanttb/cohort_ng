@@ -10,4 +10,9 @@ FactoryGirl.define do
     first_name "Bob"
     last_name "Dole"
   end
+
+  factory :role do
+    first_name "Bob"
+    last_name "Dole"
+  end
 end
