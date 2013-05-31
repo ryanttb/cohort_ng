@@ -5,9 +5,11 @@ gem "rails", "~> 3.0.20"
 gem 'jquery-rails'
 gem "formtastic", '1.2.4'
 gem "will_paginate"
-gem 'sqlite3'
+#gem 'sqlite3'
+gem 'pg'
 gem "devise"
 gem 'sunspot_rails', '1.3.0'
+gem 'sunspot_solr'
 gem 'carmen'
 gem 'ancestry'
 gem 'acts_as_list', '0.1.4'
@@ -15,7 +17,7 @@ gem 'acts_as_list', '0.1.4'
 # https://github.com/berkmancenter/acts-as-taggable-on
 gem 'acts-as-taggable-on', :git => 'git://github.com/berkmancenter/acts-as-taggable-on.git'
 gem 'carrierwave'
-gem 'mini_magick'
+gem 'mini_magick', '3.4'
 gem 'acl9'
 gem 'nokogiri'
 gem 'rake', '0.9.2.2'
@@ -23,8 +25,11 @@ gem 'breadcrumbs'
 
 group :development, :test do
   gem 'railroady'
+#  gem "ruby-graphviz"
 end
 
 group :test do
   gem 'rspec-rails', '2.11.0'
+  gem 'capybara', '1.1.2'
+  gem 'factory_girl_rails', '4.1.0'
 end

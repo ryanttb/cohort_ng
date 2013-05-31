@@ -1,10 +1,10 @@
 class ActsAsTaggableOnMigration < ActiveRecord::Migration
   def self.up
-    create_table :tags do |t|
-      t.string :name
-      t.string :ancestry
-      t.integer :position
-    end
+#    create_table :tags do |t|
+#      t.string :name
+#      t.string :ancestry
+#      t.integer :position
+#    end
 
     create_table :taggings do |t|
       t.references :tag

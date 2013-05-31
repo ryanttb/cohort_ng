@@ -16,6 +16,7 @@ development:
     min_memory: 32M
 
 test:
+  disabled: true
   solr:
     hostname: localhost
     port: 8981

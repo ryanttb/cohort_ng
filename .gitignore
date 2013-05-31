@@ -16,3 +16,4 @@ solr/*
 log/*
 public/images/thumbs/
 public/uploads/
+*.lock
